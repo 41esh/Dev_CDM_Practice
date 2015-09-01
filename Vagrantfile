@@ -63,7 +63,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define :slave1 do |slave1|
-    slave1.vm.box = "precise64"
+    slave1.vm.box = "ubuntu/precise64"
     slave1.vm.provider :virtualbox do |v|
       v.name = "yoda"
       v.customize ["modifyvm", :id, "--memory", "2048"]
@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define :slave2 do |slave2|
-    slave2.vm.box = "precise64"
+    slave2.vm.box = "ubuntu/precise64"
     slave2.vm.provider :virtualbox do |v|
       v.name = "r2d2"
       v.customize ["modifyvm", :id, "--memory", "2048"]
@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
   end
 
   # config.vm.define :slave3 do |slave3|
-  #   slave3.vm.box = "precise64"
+  #   slave3.vm.box = "ubuntu/precise64"
   #   slave3.vm.provider :virtualbox do |v|
   #     v.name = "obiwan"
   #     v.customize ["modifyvm", :id, "--memory", "2048"]
